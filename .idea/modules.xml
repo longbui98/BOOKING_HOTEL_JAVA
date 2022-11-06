@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/Java Booking Hotel.iml" filepath="$PROJECT_DIR$/.idea/Java Booking Hotel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/hotel reservation/hotel reservation.iml" filepath="$PROJECT_DIR$/hotel reservation/hotel reservation.iml" />
+    </modules>
+  </component>
+</project>
