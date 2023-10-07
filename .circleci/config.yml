@@ -1,0 +1,23 @@
+version: 2.1
+# Use a package of configuration called an orb.
+orbs:
+    aws-cli: circleci/aws-cli@2.0.3
+jobs:
+    create_infrastructure:  # Choose any name, such as `build`
+        docker:
+          - image: amazon/aws-cli
+        steps:
+          - checkout
+          - run:
+              name: Create Cloudformation Stack
+              command: |
+                  aws cloudformation deploy \
+                  --template-file template.yml \
+                  --stack-name myStack-${CIRCLE_WORKFLOW_ID:0:5} \
+                  --region us-east-1
+# Sequential workflow
+workflows:
+    # Name the workflow
+    myWorkflow:
+      jobs:
+        - create_infrastructure
